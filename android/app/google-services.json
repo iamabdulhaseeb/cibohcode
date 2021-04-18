@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1068487314849",
+    "project_id": "newcibohapp",
+    "storage_bucket": "newcibohapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068487314849:android:a4bb513c0c7f137b2c4fe0",
+        "android_client_info": {
+          "package_name": "com.finalcode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068487314849-0go8vbp6b2invcf7gd0gc9vskqgvig2a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finalcode",
+            "certificate_hash": "07468bc293b4b5af2a9223c18e16bc94f717a025"
+          }
+        },
+        {
+          "client_id": "1068487314849-t66ua0igad7ho9uld9339kvf4t6oq8o1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwbDRzqKk9BgVaHkZvMK7V12USyfudSEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068487314849-t66ua0igad7ho9uld9339kvf4t6oq8o1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

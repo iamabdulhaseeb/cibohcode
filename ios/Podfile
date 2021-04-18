@@ -1,0 +1,61 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '11.0'
+
+target 'finalcode' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
+  pod 'Stripe', '~> 20.0.0'
+
+  pod 'OpenSSL', '~> 1.0'
+  
+  pod 'tipsi-stripe', :path => '../node_modules/tipsi-stripe'
+
+  pod 'RNAppleAuthentication', :path => '../node_modules/@invertase/react-native-apple-authentication'
+
+  pod 'RNGoogleSignin', :path => '../node_modules/@react-native-community/google-signin'
+
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
+  pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNThumbnail', :path => '../node_modules/react-native-thumbnail'
+
+  pod 'RNVideoThumbnail', :path => '../node_modules/react-native-video-thumbnail'
+
+  pod 'react-native-thumbnail-generator', :path => '../node_modules/react-native-thumbnail-generator'
+
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+
+  pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary"
+
+  pod 'Permission-Microphone', :path => "#{permissions_path}/Microphone"
+
+  pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary"
+  target 'finalcodeTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+  use_flipper!()
+
+  post_install do |installer|
+    react_native_post_install(installer)
+  end
+end
